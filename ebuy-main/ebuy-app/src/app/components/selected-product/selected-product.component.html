@@ -1,0 +1,172 @@
+<body>
+    <div *ngIf="!addedItemToCart">
+        <p id="title">{{Product.title}}</p>
+        <p id="border">__________________________________________________________________________</p>
+        <img id="selectedImg" src="{{Product.galleryURL}}">
+
+        <div *ngFor="let m of Product.condition">
+            <div id="condition">Condition:
+                <p id="conditionValue">{{m.conditionDisplayName}}</p>
+            </div>
+        </div>
+
+
+        <div *ngFor="let p of Product.sellingStatus">
+            <div id="priceDetails" *ngFor="let s of p.currentPrice">
+                <p id="titlePrice">Price:</p>
+                <p id="priceInUS">US: ${{s.__value__}}</p>
+                <p id="priceILS">Approximately ILS {{(s.__value__)*3.45}}</p>
+            </div>
+        </div>
+
+
+        <div id="shippingInfo" *ngFor="let s of Product.shippingInfo">
+            <p id="titleShipping">Shipping:</p>
+            <div *ngFor="let c of s.shippingServiceCost">
+                <p id="shipCost">${{c.__value__}}</p>
+            </div>
+
+
+            <p id="shipTo">Ships to : {{s.shipToLocations}}</p>
+            <p id="location">Item location :{{Product.location}}</p>
+            <p id="shipType" *ngIf="s.expeditedShipping=='true'">This product is shipped via expedited Shipping . </p>
+
+
+            <p id="returnTitle">Returns:</p>
+            <p id="returnPlicely" *ngIf="Product.returnsAccepted=='true'">30 day returns .Buyer pays for return shipping
+                .</p>
+            <p id="returnPlicely" *ngIf="Product.returnsAccepted=='false'">Seller does not accept returns .</p>
+        </div>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="topnav" id="myTopnav">
+            <a (click)="addToCart(Product)">Add To WachList</a>
+            <a (click)="getAlert(true)">Create Alert
+            </a>
+            <a> Do like </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div id="alert">
+            <img id="alertImg" src="assets/img/ezgif.com-crop (2).gif">
+        </div>
+        <div id="wach"></div>
+        <div id="addToCart">
+            <img id="cartImg" src="assets/img/ezgif.com-gif-maker (2) (1).gif">
+        </div>
+        <div id="like"></div>
+        <div id="addLike">
+            <img id="likeImg" src="assets/img/ezgif.com-resize (1) (1).gif">
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- //item in box -->
+
+        <div *ngIf="result!=null" id="similiarItems">
+
+            <h1>Similar sponsored items</h1>
+
+            <div *ngFor="let array of result">
+
+                <div *ngFor="let res of array">
+
+                    <div id="allReltedItem" *ngFor="let item of res.searchResult">
+                        <div *ngFor="let i of item.item | slice:0:5">
+
+                            <div id="hoverImg">
+                                <img id="imgList" src="{{i.galleryURL}}">
+
+                                <div id="categoryImg">
+                                    <a id="relatedTitle" (click)="clickUrl(i)">clickMe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div *ngFor="let array of result">
+
+                <div *ngFor="let res of array">
+                    <div id="allReltedItem" *ngFor="let item of res.searchResult">
+
+                        <div *ngFor="let i of item.item | slice:5:10">
+                            <div id="hoverImg">
+                                <img id="imgList" src="{{i.galleryURL}}">
+
+                                <div id="categoryImg">
+                                    <a id="relatedTitle" (click)="clickUrl(i)">clickMe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id=previouSearch>
+
+            <h1>Your previous searches items : </h1>
+            <div id="allReltedItem">
+                <div *ngFor="let i of reloadStorage | slice:0:5">
+                    <div id="hoverImg">
+                        <img id="imgList" src="{{i.galleryURL}}">
+                        <div id="categoryImg">
+                            <a id="relatedTitle" (click)="clickUrl(i)">clickMe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="reloadStorage.length>5">
+                <div id="allReltedItem">
+                    <div *ngFor="let i of reloadStorage | slice:5:10">
+                        <div id="hoverImg">
+                            <img id="imgList" src="{{i.galleryURL}}">
+                            <div id="categoryImg">
+                                <a id="relatedTitle" (click)="clickUrl(i)">clickMe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- //finish item in box -->
+
+
+
+    </div>
+
+    <myForm *ngIf="paramToAlert" (onChoose)="getAlertName($event)"></myForm>
+
+    
+         <app-adding-product *ngIf="addedItemToCart" [addedItem]="addedItemToCart"
+        [alertName]="paramToAlert"></app-adding-product>
+    
+
+</body>
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>

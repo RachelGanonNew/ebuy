@@ -1,0 +1,22 @@
+<header>
+    <button (click)="auth.login()"  mat-menu-item *ngIf="!auth.loggedIn">
+      <mat-icon>login</mat-icon>
+      <span>Login</span>
+    </button>
+    <button (click)="auth.logout()"  mat-menu-item *ngIf="auth.loggedIn">
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+    <!-- <button  mat-menu-item >
+      <a routerLink="profile"  *ngIf="auth.loggedIn"    routerLinkActive="active">
+        <span> Profile </span>        
+      </a>
+    </button> -->
+    <!-- <router-outlet></router-outlet> -->
+    <button  mat-menu-item (click)="onClick()">
+      <span> Profile </span>
+    </button>
+  </header>
+   
+
+

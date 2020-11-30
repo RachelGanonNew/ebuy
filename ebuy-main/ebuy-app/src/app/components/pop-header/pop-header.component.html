@@ -1,0 +1,41 @@
+<p>
+  <mat-toolbar class="tool-bar">
+    <button mat-icon-button class="icon" matTooltip="Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>eBuy App</span>
+    <img id="backgroundImg" src="assets/pic/12.jpg">
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="icon " matTooltip="Add Alert">
+      <mat-icon>add_alert</mat-icon>
+    </button>
+    <button mat-icon-button class="icon" matTooltip="Watch Notifications" [matMenuTriggerFor]="alert">
+      <mat-icon>notifications</mat-icon>
+    </button>
+
+
+    <mat-menu #alert="matMenu">
+      <app-nav-br-watch (onClickBtn)="showAlertList()"></app-nav-br-watch>
+      <app-alert-list *ngIf="isClickedBtn"></app-alert-list>
+    </mat-menu>
+    <button mat-icon-button class="icon" matTooltip="Profile" [matMenuTriggerFor]="menu">
+      <div *ngIf="auth.userProfile$ | async as profile; else elseBlock">
+        <img src="{{profile.picture}}" class="profil-img">
+      </div>
+
+
+      <ng-template #elseBlock>
+        <mat-icon>account_circle</mat-icon>
+      </ng-template>
+
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <app-navbar (onClickButton)="showProfile()"></app-navbar>
+      <app-profile *ngIf="isClicked"></app-profile>
+    </mat-menu>
+  </mat-toolbar>
+</p>
+
+
+<!-- <app-adding-product *ngIf="!goToCartComponent"></app-adding-product> -->

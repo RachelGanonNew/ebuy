@@ -1,0 +1,16 @@
+<div class="searchBox">
+    <mat-form-field appearance="outline" [style.width.px]=700>
+      <mat-icon matPrefix>search</mat-icon>
+      <input matInput type="text" placeholder="Search for anything" [(ngModel)]="wordToSearch" autofocus
+        (keyup.enter)="OnClickSearch()">
+    </mat-form-field>
+    <div class="clickButton">
+      <button mat-button (click)="OnClickSearch()">SEARCH</button>
+    </div>
+    <div class="clickButton-smaller">
+      <button mat-button (click)="OnClickSearch()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </div>
+  

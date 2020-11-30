@@ -1,0 +1,38 @@
+ /* .grid-container {
+
+   display: grid;
+   height: 100vh;
+   grid-gap: 1px;
+   grid-template-rows: 65px auto 65px;
+   grid-template-columns: repeat(13, 1fr);
+   grid-template-areas: 
+   'app-pop-header app-pop-header app-pop-header app-pop-header app-pop-header app-pop-header app-pop-header app-pop-header app-pop-header app-pop-header app-pop-header app-pop-header app-pop-header'
+   'app-implement-get app-implement-get app-implement-get app-implement-get app-implement-get app-implement-get app-implement-get app-implement-get app-implement-get app-implement-get app-implement-get app-implement-get app-implement-get' 
+   'app-footer app-footer app-footer app-footer app-footer app-footer app-footer app-footer app-footer app-footer app-footer app-footer app-footer'
+       ;
+} 
+app-pop-header
+{
+   grid-area: app-pop-header;
+   background-color: white !important;
+}
+app-implement-get{
+   grid-area: app-implement-get;
+}
+app-footer {
+   grid-area: app-footer;
+   background-color: white;
+   text-align: center;
+}
+ */
+.mat-toolbar-row, .mat-toolbar-single-row 
+{
+    background-color: white;
+    border-top: solid 2px whitesmoke;
+    border-bottom: solid 2px whitesmoke;
+}
+
+
+
+
+

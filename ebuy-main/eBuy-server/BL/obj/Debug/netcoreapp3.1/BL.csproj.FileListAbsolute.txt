@@ -1,0 +1,13 @@
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\bin\Debug\netcoreapp3.1\BL.exe
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\bin\Debug\netcoreapp3.1\BL.deps.json
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\bin\Debug\netcoreapp3.1\BL.runtimeconfig.json
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\bin\Debug\netcoreapp3.1\BL.runtimeconfig.dev.json
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\bin\Debug\netcoreapp3.1\BL.dll
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\bin\Debug\netcoreapp3.1\BL.pdb
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\obj\Debug\netcoreapp3.1\BL.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\obj\Debug\netcoreapp3.1\BL.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\obj\Debug\netcoreapp3.1\BL.AssemblyInfo.cs
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\obj\Debug\netcoreapp3.1\BL.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\obj\Debug\netcoreapp3.1\BL.dll
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\obj\Debug\netcoreapp3.1\BL.pdb
+C:\Users\USER\Desktop\pwa+login\eBuy\BL\obj\Debug\netcoreapp3.1\BL.genruntimeconfig.cache

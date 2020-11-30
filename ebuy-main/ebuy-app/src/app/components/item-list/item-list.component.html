@@ -1,0 +1,45 @@
+
+<app-search-box  (itemList)="getList($event)"></app-search-box>
+<app-slider *ngIf="showSlider"></app-slider>
+<!-- <div id="cart">
+  <img (click)="goToCart()" id="cartGif" src="assets/img/Shoppin by Freepik.png">
+</div> -->
+<!-- 
+<div *ngIf="!goToCartComponent"> -->
+<div *ngIf="!selectedProduct" id="boxAllItems">
+
+  <div *ngFor="let array of result">
+
+    <div *ngFor="let res of array">
+
+      <div *ngFor="let item of res.searchResult">
+
+        <div *ngFor="let i of item.item" class="item">
+
+          <img src="{{i.galleryURL}}">
+          <a id="title" class="trunc-text" (click)="onclicked(i)">{{i.title}}</a>
+          
+          <div *ngFor="let p of i.sellingStatus">
+            <div *ngFor="let s of p.currentPrice">
+
+              <p id="titlePrice">Price:</p>
+              <p id="priceInUS">US: ${{s.__value__}}</p>
+              <p id="priceILS">Approximately ILS {{(s.__value__)*3.45}}</p>
+              <div *ngFor="let m of i.condition">
+                <p id="condition">{{m.conditionDisplayName}}</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+<!-- </div> -->
+<app-selected-product *ngIf="selectedProduct" [Product]="selectedProduct"></app-selected-product>
+
+<!-- <app-adding-product *ngIf="!goToCartComponent"></app-adding-product> -->

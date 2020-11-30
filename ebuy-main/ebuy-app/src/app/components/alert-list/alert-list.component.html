@@ -1,0 +1,9 @@
+<body *ngIf="auth.userProfile$ | async as profile">
+    <div *ngFor="let item of itemList">
+        <div id="alert">
+            <img src="{{item.galleryPic}}">
+            <p>{{item.title}}</p>
+        </div>
+      
+    </div>
+</body>

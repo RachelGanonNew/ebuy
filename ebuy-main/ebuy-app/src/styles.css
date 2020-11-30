@@ -1,0 +1,37 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  html,body{
+    /* height: 100%; */
+    width: 100%;
+  }
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.icon{
+  color:  #3665f3; 
+}
+
+.trunc-text
+{
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+
+.conversational-form {
+  left: 0;
+  margin-left: auto !important;
+  position: relative;
+  width: 29%;
+  height: 400px !important;
+  margin-right: 0.5% !important;
+  margin-top: 14% !important;
+  overflow-y: hidden;
+  
+}
+

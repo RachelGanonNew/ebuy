@@ -1,0 +1,51 @@
+.searchBox{
+    margin-left: 17%;
+    margin-top: 2%;
+    display: inline-block;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black !important;
+}
+.clickButton{
+    background-color: #3665f3;
+    cursor: pointer;
+    color: white;
+    text-align: center !important;
+    margin-left: 7px;
+    display: inline-block;
+    min-width: 209px;
+    height: 51px;
+    padding-top: 12px;
+
+}
+.clickButton-smaller{
+    background-color: #3665f3;
+    cursor: pointer;
+    color: white;
+    margin-left: 7px;
+    display: none;
+    min-width: auto;
+    line-height: 46px;
+    padding-top: 4px;
+    position: relative;
+    bottom: 74px;
+    left: 100%;
+ }
+@media only screen and (max-width: 850px)
+    {
+        ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+            width: 300px !important;
+         }     
+         .searchBox{
+             display: inline-block !important;
+             width: 300px !important;
+         }  
+         .clickButton-smaller{
+            display: inline-block ;
+         }
+        .clickButton{         
+            display: none !important;
+        }
+    }
+
+   

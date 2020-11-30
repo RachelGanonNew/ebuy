@@ -1,0 +1,166 @@
+
+
+#singleProd{
+    background-color: #fff;
+    margin-left: 17%;
+    margin-top: 2%;
+    border: 1px solid #ccc;
+    width: 60%;
+    height: 255px;
+    
+}
+
+#countItem{
+    background-color: white;
+    font-size: 1.75rem;
+    border-top: 2px solid #dd1e31;
+    border-bottom: 2px solid #dd1e31;
+    size: 30%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 253px;
+    margin-top: 2%;
+ 
+}
+#title{
+    margin-left: 8%;
+    margin-top: 3%;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,Roboto,sans-serif;
+    display: block;
+}
+
+#removeItem{
+    cursor: pointer;
+    color: #0654ba;
+    text-decoration: underline;
+    margin-left:20%;
+    position: absolute;
+    margin-top: -8%;
+}
+
+#createAlert{
+
+    cursor: pointer;
+    color: #0654ba;
+    text-decoration: underline;
+    margin-left:35%;
+    position: absolute;
+    margin-top: -8%;
+}
+
+.imgOfItem{
+    max-width: 130px;
+    max-height: 130px;
+    height: 130px;
+    width: 130px;
+    margin-top: -11%;
+    position: absolute;
+    padding-right: -25px;
+    margin-left: 3%;
+}
+
+
+#dividerUpLine{
+    color:#ccc;
+    font-weight: bold;
+    margin-left: 14%;
+    margin-top: 1%;
+    position: absolute;
+    z-index: 2;
+
+}
+
+#dividerUnderLine{
+    color:#ccc;
+    font-weight: bold;
+    margin-left: 14%;
+    margin-top: -7%;
+    position: absolute;
+    z-index: 2;
+
+}
+
+
+#condition{
+    margin-left: 5%;
+    margin-top: 17.8%;
+    background-color: #cccccc7d;
+    
+}
+
+#priceInUS{
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-left: 51%;
+    margin-top: -10%;
+    font-weight: bold;
+    position: absolute;
+    background-color: #cccccc7d;
+
+}
+
+
+#removeCart{
+    width: 53px;
+    height: 51px;
+    margin-left: 16%;
+    margin-top: -9.4%;
+    position: absolute;
+}
+
+#createAlertIcon{
+    width: 77px;
+    height: 77px;
+    margin-left: 30%;
+    margin-top: -10.1%;
+    position: absolute;
+    z-index: 1;
+
+}
+
+#alertIcon{
+    width: 55px;
+    height: 59px;
+    margin-left: 45.8%;
+    margin-top: -4.4%;
+    position: absolute;
+}
+
+
+#divider
+{
+    position: absolute;
+    margin-left: 26.5%;
+    margin-top: -8.8%;
+    color: #ccc;
+    font-size: 65px;
+}
+
+#warning{
+    position: absolute;
+   width: 79%;
+   
+
+}
+
+#warningIcon{
+    width: 30px;
+    height: 30px;
+    margin-left: 70%;
+    margin-top: -3%;
+    position: absolute;
+}
+
+#warning p{
+    font-family: "Helvetica Neue",Helvetica,Arial,Roboto,sans-serif;
+    color:#dd1e31;
+    margin-left:45% ;
+}

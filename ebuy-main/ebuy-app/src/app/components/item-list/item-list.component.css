@@ -1,0 +1,146 @@
+#cartGif{
+    width: 30px;
+    height: 29px;
+    margin-top: -20.7%;
+    margin-left: 88.7%;
+    border: white;
+    cursor: pointer;
+}
+
+
+#boxAllItems{
+    width:60%;
+    margin-left: 17%;
+    }
+    
+    img{
+        /* float: left; */
+        vertical-align: middle;
+        display: inline-block;
+        border-color: lightgray;
+        border-style: solid;
+        margin-left: 3%;
+        max-width: 135px;
+        max-height: 140px;
+        height: 140px;
+        width: 135px;
+        margin-top: 4%;
+        
+    }
+    .item{
+        border: 1px solid #ddd;
+        border-width: thin;
+        border-bottom: 1px solid #f1eeee;
+        height: 200px;
+       
+    }
+
+    #title
+    {
+    margin-left: 2.5%;
+    color: #3665f3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    position: absolute;
+    /* margin-bottom: 2%; */
+    margin-top: 2%;
+        
+    }
+    #title:hover
+    {
+        margin-left: 2.5%;
+        color:#111820;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        text-decoration-line:underline;
+        text-decoration-style: solid;
+        cursor: pointer;
+        
+    }
+    #title:visited
+    {
+        color:#82187c;
+    }
+    #condition{
+        margin-left: 13.5%;
+        margin-top: -8%;
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #767676;
+         font-size: 13px;
+        
+    }
+    
+    #titlePrice{
+        margin-left: 14%;
+        color: #111820;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        margin-top: -6%;
+        position: absolute;
+    }
+    
+    #priceInUS{
+        margin-left: 17%;
+        color: #111820;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: -6%;
+        position: absolute;
+    }  
+    #priceILS{
+        margin-left: 14%;
+        color: #111820;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        margin-top: -3%;
+        position: absolute;
+    }
+
+    @media only screen and (max-width: 850px)
+    {
+        ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+            width: 300px !important;
+         }     
+         .searchBox{
+             display: inline-block !important;
+             width: 300px !important;
+         }  
+       
+         .clickButton-smaller{
+            display: inline-block ;
+         }
+        .clickButton{         
+            display: none !important;
+        }
+    }
+    @media only screen and (max-width: 500px)
+    {
+       
+         #title 
+         {
+           display: none;
+         }
+         #priceInUS{
+            display: none;           
+        }
+        #titlePrice{
+            display: none;
+        }
+        #condition{
+            display: none;
+        }
+        #priceILS{
+            display: none;
+        }
+        img{
+            width:100%;
+            border:none;
+            margin: 0;
+        }
+    }  
+
+
+    
+ 

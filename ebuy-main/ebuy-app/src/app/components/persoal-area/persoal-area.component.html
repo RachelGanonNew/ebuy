@@ -1,0 +1,42 @@
+<body>
+
+    <p id="countItem">WatchingList - You currently have {{itemInCart}} items on view ); </p>
+
+    <div *ngFor="let item of itemList">
+
+        <div id="singleProd">
+            <p id="title">{{item.title}}</p>
+            <div id="warning" *ngIf="item.haveAlertName==null">
+                <img id="warningIcon" src="assets/pic/Download Exclamation Button for free.png">
+                <p>You haven't selected an alert parameter for this product</p>
+            </div>
+            <p id="dividerUpLine">_______________________________________________________</p>
+            <p id="condition">{{item.condition}}</p>
+            <img class="imgOfItem" src="{{item.gallery}}">
+            <p id="priceInUS">US: ${{item.currentPrice}}</p>
+
+            <a id="removeItem" (click)="removeItem(item.itemId,item.haveAlertName)">Remove</a>
+
+            <img id="removeCart" src="assets/img/Free Shopping Cart Icon.png">
+            <p id="divider">|</p>
+            <img id="createAlertIcon" src="assets/img/The Noun Project.png">
+
+
+
+            <a *ngIf="item.haveAlertName==null" id="createAlert" (click)="CreateopenChat(item)">Create Alert</a>
+            <a *ngIf="item.haveAlertName" id="createAlert" (click)="openChat(item)">Change Alert</a>
+
+
+            <p id="dividerUnderLine">_______________________________________________________</p>
+
+        </div>
+
+    </div>
+   
+
+
+</body>
+
+<div>
+    <myForm *ngIf="flag==true" (onChoose)="getAlertName($event)"></myForm>
+</div>
